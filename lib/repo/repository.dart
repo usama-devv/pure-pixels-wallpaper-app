@@ -16,9 +16,9 @@ class Repository {
     String url = '';
 
     if (pageNumber == null) {
-      url = "$baseURL?per_page=80";
+      url = "${baseURL}curated?per_page=80";
     } else {
-      url = "$baseURL?per_page=80&page=$pageNumber";
+      url = "${baseURL}curated?per_page=80&page=$pageNumber";
     }
 
     List<Images> imagesList = [];
