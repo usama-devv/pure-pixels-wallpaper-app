@@ -42,8 +42,8 @@ class _PreviewScreenState extends State<PreviewScreen> {
             backgroundColor: Colors.orange,
             foregroundColor: Colors.white,
             shape: const CircleBorder(),
-            onPressed: () {
-              repo.downloadImage(
+            onPressed: () async {
+              await repo.downloadImage(
                   imageUrl: widget.imageUrl,
                   imageId: widget.imageId,
                   context: context);
@@ -56,8 +56,8 @@ class _PreviewScreenState extends State<PreviewScreen> {
                 Colors.blue,
             foregroundColor: Colors.white,
             shape: const CircleBorder(),
-            onPressed: () {
-              Share.share(widget.imageUrl, subject: 'Checkout this wallpaper!');
+            onPressed: () async {
+              await Share.share(widget.imageUrl, subject: 'Checkout this wallpaper!');
             },
             child: const Icon(Icons.share),
           ),
